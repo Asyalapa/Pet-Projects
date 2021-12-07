@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms Style | Media Queries</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <form class="form" id="form" novalidate>
+
+        <h1 class="form__title">Регистрация</h1>
+
+        <div class="form__group">
+            <span>*</span>
+            <input type="email" class="form__input _email req" placeholder="Введите e-mail" id="email">
+            <label class="form__label">Email</label>
+            <small></small>
+        </div>
+
+        <div class="form__group group__password">
+            <span>*</span>
+            <input type="password" class="form__input _password req" placeholder="Введите пароль" id="password">
+            <label class="form__label">Пароль</label>
+            <small></small>
+        </div>
+
+        <div class="form__group group__checkbox">
+            <span>*</span>
+            <input type="checkbox" class="form__checkbox req">
+            <div class="form__checkbox-mark"></div>
+            <label class="form__checkbox-label">Я согласен c <a href="#">Правилами пользованием приложением</a></label>
+            <small></small>
+        </div>
+
+        <input type="submit" value="Регистрация" class="form__button">
+
+    </form>
+    <script src="script.js"></script>
+</body>
+
+</html>
