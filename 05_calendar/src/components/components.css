@@ -1,0 +1,100 @@
+/* ТЕЛО КАЛЕНДАРЯ */
+.calc-box {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 400px;
+    height: 450px;
+    background: rgba(255, 255, 255, .1);
+    box-shadow: 0 25px 45px rgba(0, 0, 0, .1);
+    border: 1px solid rgba(255, 255, 255, .5);
+    border-right: 1px solid rgba(255, 255, 255, .2);
+    border-bottom: 1px solid rgba(255, 255, 255, .2);
+    border-radius: 10px;
+    backdrop-filter: blur(25px);
+}
+
+/* ШАПКА КАЛЕНДАРЯ */
+.calc-head {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
+    color: #ffffff;
+}
+
+.calc-head__title {
+    letter-spacing: .5em;
+    margin-bottom: .5em;
+}
+
+.calc-head__date-now {
+    letter-spacing: .1em;
+    padding-bottom: .5em;
+    margin-bottom: .5em;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.calc__weekdays {
+    display: grid;
+    width: 100%;
+    height: 2em;
+    grid-template-columns: repeat(7, 1fr);
+    grid-gap: 5px;
+}
+
+/* ЧИСЛА МЕСЯЦА */
+.calc-grid__wrapper {
+    display: grid;
+    width: 100%;
+    height: 100%;
+    padding: 1em;
+    padding-top: 0;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    grid-gap: 5px;
+}
+
+.calc-head__weekdays-item,
+.calc-grid__cell {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    border-radius: 8px;
+    transition: .5s;
+}
+.calc-head__weekdays-item.this-day,
+.calc-grid__cell.this-day {
+    background: rgba(255, 255, 255, .1);
+    border-radius: 8px;
+}
+
+.calc-grid__cell.weekend {
+    color: aquamarine;
+}
+
+.calc-head__weekdays-item:hover,
+.calc-grid__cell:hover {
+    font-weight: 600;
+    border: 1px solid #ffffff;
+    border-radius: 8px;
+    background: #ffffff;
+    color: #072e5e;
+    cursor: pointer;
+    transition: none;
+}
+
+.calc-grid__cell.today {
+    font-size: 1.2em;
+    font-weight: 900;
+    background: #ffffff;
+    color: black;
+    border-radius: 8px;
+}
+
+.calc-grid__item.not-this-month {
+    opacity: .4;
+}

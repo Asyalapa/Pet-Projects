@@ -1,0 +1,54 @@
+@font-face {
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/oswald/v40/TK3_WkUHHAIjg75cFRf3bXL8LICs1_FvsUtiZTaR.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Oswald, sans-serif;
+}
+
+.App {
+  text-align: center;
+}
+
+.box {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #072e5e;
+  overflow: hidden;
+}
+
+.box::before {
+  content: '';
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  background: linear-gradient(to right, rgb(0, 136, 255), rgba(255, 255, 255, .7));
+  border-radius: 50%;
+  transform: translate(-180px, -130px);
+}
+
+.box::after {
+  content: '';
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  background: linear-gradient(to right, rgba(255, 255, 255, .7), rgb(0, 136, 255));
+  border-radius: 50%;
+  transform: translate(180px, 130px);
+}
+
+.container {
+  position: relative;
+  z-index: 100;
+}
+
